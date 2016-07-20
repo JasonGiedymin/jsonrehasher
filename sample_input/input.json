@@ -1,0 +1,9 @@
+{
+  "version" : "3.0.0",
+  "gauges" : { },
+  "counters.a" : {
+    "metrics.activeRequests" : {
+      "count" : 1
+    }
+  }
+}

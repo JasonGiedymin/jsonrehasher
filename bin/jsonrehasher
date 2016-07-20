@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+lib = File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.unshift(lib) if File.directory?(lib) && !$LOAD_PATH.include?(lib)
+
+require 'jsonrehasher'
+
+def showHelp()
+    puts "Usage: jsonrehasher <option>"
+    puts "       --file <a file>"
+    puts '       --data \'{"some":"json_data"}\''
+end
+
+args = ARGV.dup
+ARGV.clear
+command = args.shift.strip rescue 'help'
+if command == '--help'
+    showHelp()
+elsif command == '--file'
+    print JsonRehasher.new().processFile(args.shift)
+elsif command == '--data'
+    print JsonRehasher.new().process(args.shift)
+else
+    puts "Invalid Usage. See usage below.\n"
+    showHelp()
+end

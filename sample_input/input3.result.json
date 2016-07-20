@@ -1,0 +1,1 @@
+{"version":"3.0.0","gauges":{},"counters":{"metrics":{"activeRequests":{"count":1}}},"meters":{"metrics":{"responseCodes":{"badRequest":{"count":0,"m15_rate":0.0,"m1_rate":0.0,"m5_rate":0.0,"mean_rate":0.0,"units":"events/second"}}}}}
